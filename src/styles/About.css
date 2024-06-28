@@ -4,7 +4,16 @@
 }
 
 .content-about {
+    display: flex;
+    justify-content: center;
     background-color: lightcoral;
     min-height: 100vh;
 }
-
+.aboutsection {
+    font-family: 'roboto';
+    font-size: 80px;
+    color: beige;
+    position: absolute;
+    top: 150%;
+}
+ 

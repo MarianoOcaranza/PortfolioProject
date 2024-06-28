@@ -4,6 +4,16 @@
 }
 
 .content-portfolio {
+    display: flex;
+    justify-content: center;
     background-color: lightslategray;
     min-height: 100vh;
 }
+.portfoliosection {
+    font-family: 'roboto';
+    font-size: 80px;
+    color: beige;
+    position: absolute;
+    top: 50%;
+}
+ 

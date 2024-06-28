@@ -5,6 +5,7 @@
 }
 
 .header {
+    z-index: 1;
     font-family: 'Roboto';
     font-weight: 300;
     position: fixed;

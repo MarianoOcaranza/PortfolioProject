@@ -4,7 +4,16 @@
 }
 
 .content-home {
+    display: flex;
+    justify-content: center;
     background-color: lightskyblue;
     min-height: 100vh;
 }
-
+.welcome {
+    font-family: 'roboto';
+    font-size: 80px;
+    color: beige;
+    position: absolute;
+    top: 50%;
+}
+ 
