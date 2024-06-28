@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.content-about {
+    background-color: lightcoral;
+    min-height: 100vh;
+}
+

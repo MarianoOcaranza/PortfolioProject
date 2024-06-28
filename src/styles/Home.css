@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.content-home {
+    background-color: lightskyblue;
+    min-height: 100vh;
+}
+
