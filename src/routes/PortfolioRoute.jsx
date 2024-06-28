@@ -4,7 +4,7 @@ import Portfolio from '../Portfolio'
 
 function PortfolioRoute() {
     return (
-    <div id='top'>
+    <div>
       <Menu />
       <Portfolio />
     </div>

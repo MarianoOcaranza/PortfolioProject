@@ -5,7 +5,7 @@ import About from '../About'
 
 function App() {
   return (
-    <div id='top'>
+    <div>
       <Menu />
       <Home />
       <About />
