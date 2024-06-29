@@ -3,17 +3,15 @@
     margin: 0;
     text-decoration: none;
 }
-
 .content-home {
     display: flex;
-    background-image: url('public/home_background.jpg');
-    background-size: cover;
     min-height: 100vh;
+    background-color: rgba(135, 206, 250, 0.562);
 }
 .welcome {
     font-family: 'roboto';
     font-weight: 300;
-    color: beige;
+    color: rgb(71, 71, 71);
     position: absolute;
     justify-content: center;
     top: 35%;
@@ -22,22 +20,14 @@
     width: 90vw;
     height: 50vh;
     display: flex;
-    background-image: linear-gradient(
-        to left, 
-        transparent,
-        #1f1f1fb3,
-        #1f1f1fd9,
-        #1f1f1fe6,
-        #1f1f1fd9,
-        #1f1f1fb3, 
-        transparent);
+    background-image: linear-gradient(to left,transparent,lightskyblue);
 }
 #hola {
     font-family: 'Nunito';
     font-weight: 300;
     margin-top: 30px;
     font-size: 120px;
-    color: rgb(122, 209, 205);
+    color: rgb(71, 71, 71);
 }
 #soy {
     margin-top: 30px;
@@ -45,12 +35,6 @@
 }
 #dev {
     font-size: 25px;
-}
-#footer_home {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 18px;
 }
 
 @media screen and (max-width: 767px) {
@@ -72,8 +56,21 @@
     #dev {
         font-size: 15px;
     }
-    #footer_home {
-        font-size: 15px;
-        left: 0;
+}
+@media (min-width: 768px) and (max-width: 900px) {
+    #hola {
+        position: absolute;
+        left: 5%;
+        bottom: 5%;
+    }
+    #soy {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #dev {
+        position: absolute;
+        bottom: 25%;
+        right: 0;
     }
 }

@@ -6,7 +6,7 @@ import './styles/Menu.css'
 
 function Menu() {
     const [isOpen, setIsOpen] = useState(false)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 900)
     const [isScrolled, setIsScrolled] = useState(false)
     const menuRef = useRef(null)
 
@@ -25,8 +25,8 @@ function Menu() {
     })
 
     const handleResize = ()=> {
-        setIsMobile(window.innerWidth < 767)
-        if (window.innerWidth > 767) {
+        setIsMobile(window.innerWidth < 900)
+        if (window.innerWidth > 900) {
             setIsOpen(false)
         }
     }

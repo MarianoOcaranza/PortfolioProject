@@ -11,8 +11,8 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #1f1f1f;
-    padding: 40px;
+    background-color: #3d3d3d;
+    padding: 30px;
     transition: 1s;
 }
 .title {
@@ -85,7 +85,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
     .menu-options {
         flex-direction: column;
     }
