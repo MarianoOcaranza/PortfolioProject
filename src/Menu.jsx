@@ -25,8 +25,8 @@ function Menu() {
     })
 
     const handleResize = ()=> {
-        setIsMobile(window.innerWidth < 768)
-        if (window.innerWidth > 768) {
+        setIsMobile(window.innerWidth < 767)
+        if (window.innerWidth > 767) {
             setIsOpen(false)
         }
     }
