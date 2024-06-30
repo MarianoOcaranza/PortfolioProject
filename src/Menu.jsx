@@ -1,13 +1,13 @@
 import React, {useState, useEffect, useRef} from 'react';
-import { Link } from 'react-scroll';
-import { NavLink } from "react-router-dom";
-import { NavHashLink } from 'react-router-hash-link';
+import { useLocation, useNavigate } from 'react-router-dom'
 import './styles/Menu.css'
 
 function Menu() {
     const [isOpen, setIsOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(window.innerWidth < 900)
     const [isScrolled, setIsScrolled] = useState(false)
+    const location = useLocation()
+    const navigate = useNavigate()
     const menuRef = useRef(null)
 
     const handleScroll = ()=> {
@@ -53,6 +53,34 @@ function Menu() {
         }
     })
 
+
+    const handleNav = (sectionId)=> {
+        const section = document.getElementById(sectionId)
+        if (sectionId === 'Portfolio') {
+            navigate('/portfolio')
+        }
+        else {
+            if (location.pathname !== '/') {
+                navigate('/')
+                setTimeout(()=> {
+                    const section = document.getElementById(sectionId)
+                    if (sectionId === 'root') {
+                        section.scrollIntoView()
+
+                    }
+                    else if (sectionId === 'About') {
+                        section.scrollIntoView()
+                    }
+                }, 100)
+            }
+            else {
+                if (section) {
+                    section.scrollIntoView();
+                  }
+            }
+        }
+    }
+
     return(
         <div className={`${isScrolled ? 'header shrink' : 'header'}`}>
             {isMobile ? (
@@ -64,41 +92,41 @@ function Menu() {
                 </img>
                 {isOpen && (
                     <ul className="menu-options">
-                        <NavHashLink
+                    <li
+                        onClick={()=> handleNav('root')}
                         className='menu-item'
-                        to="/#top"
                        >Home
-                    </NavHashLink>
-                    <NavHashLink
+                    </li>
+                    <li
                         className='menu-item'
-                        to="/#About"
+                        onClick={()=> handleNav('About')}
                         >About
-                    </NavHashLink>
-                    <NavLink 
+                    </li>
+                    <li 
                         className='menu-item'
-                        to="/portfolio"
+                        onClick={()=> handleNav('Portfolio')}
                         >Portfolio
-                    </NavLink>
+                    </li>
                     </ul>
                 )}
             </div>) : (
             <div className="menu-content">
                 <ul className="menu-options">
-                    <NavHashLink
+                <li
                         className='menu-item'
-                        to="/#top"
+                        onClick={()=> handleNav('root')}
                        >Home
-                    </NavHashLink>
-                    <NavHashLink
+                    </li>
+                    <li
                         className='menu-item'
-                        to="/#About"
+                        onClick={()=> handleNav('About')}
                         >About
-                    </NavHashLink>
-                    <NavLink 
+                    </li>
+                    <li 
                         className='menu-item'
-                        to="/portfolio"
+                        onClick={()=> handleNav('Portfolio')}
                         >Portfolio
-                    </NavLink>
+                    </li>
                 </ul>
             </div>
             )}

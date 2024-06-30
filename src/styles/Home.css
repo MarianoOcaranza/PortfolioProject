@@ -1,71 +1,37 @@
 .content-home {
+    font-size: 18px;
     display: flex;
-    min-height: 100vh;
+    align-items: center;
+    height: 110vh;
     background-color: rgba(135, 206, 250, 0.562);
 }
 .welcome {
-    font-family: 'roboto';
-    font-weight: 300;
     color: rgb(71, 71, 71);
-    position: absolute;
     justify-content: center;
-    top: 35%;
-    padding: 50px;
-    gap: 100px;
-    width: 90vw;
-    height: 50vh;
+    gap: 10%;
+    align-items: center;
+    padding: 70px;
+    width: 100vw;
+    height: fit-content;
+    flex-wrap: wrap;
     display: flex;
     background-image: linear-gradient(to left,transparent,lightskyblue);
 }
 #hola {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 300;
-    margin-top: 30px;
-    font-size: 120px;
-    color: rgb(71, 71, 71);
+    font-size: 6em;
 }
 #soy {
-    margin-top: 30px;
-    font-size: 60px;
+    font-weight: 400;
+    font-size: 2.3em;
 }
 #dev {
-    font-size: 25px;
+    font-weight: 300;
+    font-size: 1.3em;
 }
-
-@media screen and (max-width: 767px) {
-    .welcome {
-        flex-direction: column;
-        top: 30%;
-        gap: 50px;
-        width: 100vw;
-    }
-    #hola {
-        font-size: 90px;
-        margin-top: 0;
-        align-self: center;
-    }
-    #soy {
-        margin-top: 0;
-        font-size: 40px;
-    }
-    #dev {
-        font-size: 15px;
-    }
-}
-@media (min-width: 768px) and (max-width: 900px) {
-    #hola {
-        position: absolute;
-        left: 5%;
-        bottom: 5%;
-    }
-    #soy {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    #dev {
-        position: absolute;
-        bottom: 25%;
-        right: 0;
+@media screen and (max-height: 400px) {
+    .content-home {
+        height: fit-content;
     }
 }
