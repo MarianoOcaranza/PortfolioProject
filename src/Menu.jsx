@@ -55,23 +55,18 @@ function Menu() {
 
     return(
         <div className={`${isScrolled ? 'header shrink' : 'header'}`}>
-            {!isOpen && (
-                <div>
-                <p className="title">Mariano Ocaranza</p>
-            </div>
-            )}
             {isMobile ? (
             <div className="menu-content" ref={menuRef}>
                 <img 
                     onClick={OpenMenu} 
-                    className={`menuicon ${isScrolled ? 'menuiconscrolled' : ''}`} 
+                    className= 'menuicon'
                     src={`${!isOpen ? 'src/icons/menu_ico.png' : 'src/icons/close_ico.png'}`}>
                 </img>
                 {isOpen && (
                     <ul className="menu-options">
                         <NavHashLink
                         className='menu-item'
-                        to="/#Home"
+                        to="/#top"
                        >Home
                     </NavHashLink>
                     <NavHashLink
@@ -91,7 +86,7 @@ function Menu() {
                 <ul className="menu-options">
                     <NavHashLink
                         className='menu-item'
-                        to="/#Home"
+                        to="/#top"
                        >Home
                     </NavHashLink>
                     <NavHashLink
@@ -107,6 +102,11 @@ function Menu() {
                 </ul>
             </div>
             )}
+            {!isOpen && (
+        <div>
+            <p className="title">Mariano Ocaranza</p>
+        </div>
+        )}
         </div>
     )
 }
