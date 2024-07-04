@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
 import './styles/Menu.css'
 
@@ -41,17 +41,18 @@ function Menu() {
         setIsOpen(!isOpen);
     }
 
-    const handleClickOutside = (event)=> {
+    const handleClickOutside = useCallback((event)=> {
         if(menuRef.current && !menuRef.current.contains(event.target)) {
             setIsOpen(false)
         }
-    }
+    }, [menuRef, setIsOpen]);
+
     useEffect(()=> {
         document.addEventListener('mousedown', handleClickOutside)
         return ()=> {
             document.removeEventListener('mousedown', handleClickOutside)
         }
-    })
+    }, [handleClickOutside])
 
 
     const handleNav = (sectionId)=> {
