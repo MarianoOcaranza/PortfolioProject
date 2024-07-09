@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
-import './styles/Menu.css'
+import '../styles/Menu.css'
 
 function Menu() {
     const [isOpen, setIsOpen] = useState(false)
